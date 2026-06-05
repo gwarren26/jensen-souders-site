@@ -419,17 +419,25 @@ footer {
 }
 .team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(13,27,42,.18); }
 
-/* Avatar area — height driven by image, no cropping */
+/* Avatar area */
 .team-avatar {
   background: linear-gradient(135deg, var(--navy), var(--steel));
   border-bottom: 3px solid var(--orange);
+  height: 320px; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
-.team-avatar img { width: 100%; height: auto; display: block; }
+.team-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
 .team-avatar .initials {
   color: var(--orange); font-size: 2rem; font-weight: 800; letter-spacing: .05em;
-  padding: 2rem 0;
 }
+
+/* Featured card avatar — taller */
+.team-card-featured .team-avatar { height: 480px; }
 
 .team-info { padding: 1.25rem 1rem; }
 .team-info h3 { color: var(--navy); font-size: 1rem; margin-bottom: .25rem; }
