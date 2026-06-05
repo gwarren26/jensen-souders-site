@@ -430,12 +430,16 @@ footer {
 .team-info .title { color: var(--orange); font-size: .83rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; }
 
 /* Featured president card */
-.team-card-featured { width: 260px; }
-.team-avatar-featured { height: 140px; }
+.team-card-featured { width: 300px; }
+.team-avatar-featured { height: 220px; }
 .team-avatar-featured .initials { font-size: 2.8rem; }
+.team-avatar-featured img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .team-card-featured .team-info { padding: 1.5rem 1.25rem; }
 .team-card-featured .team-info h3 { font-size: 1.25rem; }
 .team-card-featured .team-info .title { font-size: .9rem; }
+
+/* Photo avatar */
+.team-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
