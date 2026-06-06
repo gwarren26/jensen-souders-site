@@ -7,7 +7,11 @@
   <meta name="description" content="Founded in 1920 as the Fred A. Jensen Company, Jensen-Souders & Associates has over a century of chemical warehousing expertise in the Chicago area.">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>body{font-family:'Inter',system-ui,sans-serif}</style>
+  <style>
+    body{font-family:'Inter',system-ui,sans-serif}
+    .subnav-tab{padding:.85rem 1.25rem;font-size:.9rem;font-weight:600;color:var(--gray);white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none;transition:color .2s,border-color .2s}
+    .subnav-tab.active,.subnav-tab:hover{color:var(--navy);border-bottom-color:var(--orange)}
+  </style>
 </head>
 <body>
 
@@ -43,14 +47,14 @@
 </section>
 
 <!-- SUB-NAV TABS -->
-<div style="background:#fff;border-bottom:2px solid var(--border);position:sticky;top:70px;z-index:900">
+<div id="about-subnav" style="background:#fff;border-bottom:2px solid var(--border);position:sticky;top:70px;z-index:900">
   <div class="container" style="display:flex;gap:0;overflow-x:auto">
-    <a href="#story"     style="padding:.85rem 1.25rem;font-size:.9rem;font-weight:600;color:var(--navy);white-space:nowrap;border-bottom:3px solid var(--orange);text-decoration:none">Our Story</a>
-    <a href="#mission"   style="padding:.85rem 1.25rem;font-size:.9rem;font-weight:600;color:var(--gray);white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none">Mission</a>
-    <a href="#history"   style="padding:.85rem 1.25rem;font-size:.9rem;font-weight:600;color:var(--gray);white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none">History</a>
-    <a href="#facilities" style="padding:.85rem 1.25rem;font-size:.9rem;font-weight:600;color:var(--gray);white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none">Facilities</a>
-    <a href="#team"      style="padding:.85rem 1.25rem;font-size:.9rem;font-weight:600;color:var(--gray);white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none">Our Team</a>
-    <a href="#values"    style="padding:.85rem 1.25rem;font-size:.9rem;font-weight:600;color:var(--gray);white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none">Our Values</a>
+    <a href="#story"      class="subnav-tab">Our Story</a>
+    <a href="#mission"    class="subnav-tab">Mission</a>
+    <a href="#history"    class="subnav-tab">History</a>
+    <a href="#facilities" class="subnav-tab">Facilities</a>
+    <a href="#team"       class="subnav-tab">Our Team</a>
+    <a href="#values"     class="subnav-tab">Our Values</a>
   </div>
 </div>
 
@@ -424,6 +428,27 @@
 
 <button id="back-to-top" aria-label="Back to top">↑</button>
 <script src="js/main.js"></script>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Scroll-spy for about page sub-nav
+  (function(){
+    const sections = ['story','mission','history','facilities','team','values']
+      .map(id => document.getElementById(id)).filter(Boolean);
+    const tabs = document.querySelectorAll('.subnav-tab');
+    const navH = 70 + 50; // main nav + subnav height
+
+    function setActive(){
+      let current = sections[0].id;
+      for(const sec of sections){
+        if(window.scrollY + navH + 10 >= sec.offsetTop) current = sec.id;
+      }
+      tabs.forEach(t => t.classList.toggle('active', t.getAttribute('href') === '#' + current));
+    }
+
+    window.addEventListener('scroll', setActive, {passive:true});
+    setActive();
+  })();
+</script>
 </body>
 </html>
