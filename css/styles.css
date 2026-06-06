@@ -178,6 +178,26 @@ p  { color: #4a5260; margin-bottom: 1rem; }
 .hero-lead { color: rgba(255,255,255,.78); font-size: 1.12rem; margin-bottom: 2rem; max-width: 560px; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; }
 
+/* ── Video hero overlay ── */
+.hero-video { background: var(--navy); }
+.hero-video-wrap {
+  position: absolute; inset: 0; overflow: hidden; z-index: 0;
+}
+.hero-video-wrap iframe {
+  /* Scale the 16:9 iframe to always cover the full viewport */
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 100vw;
+  height: 56.25vw;   /* 16:9 at viewport width */
+  min-height: 100%;
+  min-width: 177.78vh; /* 16:9 at viewport height */
+  transform: translate(-50%, -50%);
+  border: 0; pointer-events: none;
+}
+/* Overlay sits above video, below content */
+.hero-video .hero-overlay { z-index: 1; }
+.hero-video .container    { z-index: 2; }
+
 /* ================================================================
    PAGE HERO — inner pages
    ================================================================ */
