@@ -3,179 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Jensen-Souders & Associates, Inc.</title>
-  <meta name="description" content="Contact Jensen-Souders & Associates for chemical warehousing, hazmat storage, or freight shipping quotes. Located in the Chicago metropolitan area.">
+  <title>Contact | Jensen-Souders &amp; Associates, Inc.</title>
+  <meta name="description" content="Contact Jensen-Souders & Associates for pricing, shipping info, or general inquiries. Located in Itasca and Belvidere, IL. Call (630) 773-1830.">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body{font-family:'Inter',system-ui,sans-serif}
-    .map-container {
-      width: 100%; height: 340px; border-radius: var(--radius); overflow: hidden;
-      box-shadow: var(--shadow); margin-top: 2rem;
-      background: #e8ecf0; display: flex; align-items: center; justify-content: center;
-      border: 1px solid var(--border);
-    }
-    .map-placeholder { text-align: center; color: var(--gray); }
-    .map-placeholder .icon { font-size: 3rem; margin-bottom: .75rem; }
-    .map-placeholder p { font-size: .9rem; }
-  </style>
 </head>
 <body>
 
+<!-- NAVIGATION -->
 <nav id="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">
-      <svg class="logo-icon" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="6" fill="#e8601c"/><path d="M8 34V18l14-8 14 8v16" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><rect x="16" y="24" width="12" height="10" rx="1" fill="#fff" opacity=".9"/><circle cx="22" cy="15" r="3" fill="#fff" opacity=".8"/></svg>
-      <span>Jensen-Souders <span>&amp; Associates</span></span>
+      <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+        <rect width="44" height="44" rx="6" fill="#c8922a"/>
+        <path d="M8 34V18l14-8 14 8v16" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+        <rect x="16" y="24" width="12" height="10" rx="1" fill="#fff" opacity=".9"/>
+        <circle cx="22" cy="15" r="3" fill="#fff" opacity=".8"/>
+      </svg>
+      Jensen-Souders <span>&amp; Associates</span>
     </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="warehouse.html">Warehouse</a></li>
-      <li><a href="hazmat-warehouse.html">Hazmat</a></li>
-      <li><a href="shipping.html">Shipping</a></li>
-      <li><a href="nacd-compliance.html">NACD &amp; Compliance</a></li>
+      <li class="nav-has-dropdown">
+        <a href="about.html" class="dropdown-trigger">About Us <span class="nav-caret">&#9660;</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="nacd-compliance.html">ACD Compliance</a></li>
+          <li><a href="warehouse.html">Warehouse</a></li>
+        </ul>
+      </li>
+      <li class="nav-has-dropdown">
+        <a href="hazmat-warehouse.html" class="dropdown-trigger">Hazmat <span class="nav-caret">&#9660;</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="sdstrax.html">SDSTrax</a></li>
+        </ul>
+      </li>
       <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact.html" class="btn btn-orange nav-cta active">Get a Quote</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<section class="page-hero">
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
   <div class="container">
-    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Contact</span></nav>
-    <h1>Contact Us</h1>
-    <p>Ready to discuss your chemical warehousing or shipping needs? Our team is here to help — reach out and we'll respond promptly.</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <span class="cur">Contact</span>
+    </div>
+    <h1>Contact</h1>
+    <p class="page-sub">We'd love to hear from you. Reach out for pricing, shipping info, or a facility tour.</p>
   </div>
-</section>
+</div>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section class="section-pad">
   <div class="container">
     <div class="contact-grid">
 
-      <!-- INFO COLUMN -->
+      <!-- Info -->
       <div class="fade-up">
-        <div class="section-header">
-          <span class="eyebrow">Get in Touch</span>
-          <h2 style="color:var(--navy)">We'd Love to Hear from You</h2>
-          <div class="divider divider-left"></div>
-        </div>
-        <p>Whether you need a storage quote, have a compliance question, want to arrange a facility tour, or are ready to start a new account — our team is available and responsive. Use the form or contact us directly using the information below.</p>
+        <span class="eyebrow">Get in Touch</span>
+        <h2 style="color:var(--navy);margin-bottom:1.5rem">Jensen-Souders &amp; Associates, Inc.</h2>
 
-        <div class="contact-item">
-          <div class="contact-icon">📞</div>
+        <div class="contact-info-item">
+          <div class="ci-icon">&#128205;</div>
           <div>
-            <strong>Phone</strong>
-            <p><a href="tel:+17085621006" style="color:#444">(708) 562-1006</a></p>
+            <div class="ci-label">Main Location</div>
+            <div class="ci-value">725 Baker Dr., Itasca, IL 60143</div>
           </div>
         </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">✉️</div>
+        <div class="contact-info-item">
+          <div class="ci-icon">&#128205;</div>
           <div>
-            <strong>Email</strong>
-            <p><a href="mailto:info@jensen-souders.net" style="color:#444">info@jensen-souders.net</a></p>
+            <div class="ci-label">Second Location</div>
+            <div class="ci-value">3915 Morriem Dr., Belvidere, IL 61008</div>
           </div>
         </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
+        <div class="contact-info-item">
+          <div class="ci-icon">&#128336;</div>
           <div>
-            <strong>Location</strong>
-            <p>Chicago Metropolitan Area, Illinois<br>Serving the Midwest and nationwide</p>
+            <div class="ci-label">Hours</div>
+            <div class="ci-value">7:00 a.m. &ndash; 3:30 p.m., Monday&ndash;Friday</div>
           </div>
         </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">🕐</div>
+        <div class="contact-info-item">
+          <div class="ci-icon">&#128222;</div>
           <div>
-            <strong>Office Hours</strong>
-            <p>Monday – Friday: 7:00 AM – 5:00 PM CT<br>After-hours emergency line available</p>
-          </div>
-        </div>
-
-        <div style="background:var(--light);border-radius:var(--radius);padding:1.25rem;margin-top:1.5rem;border-left:4px solid var(--orange)">
-          <strong style="color:var(--navy);font-size:.9rem">🚨 Chemical Emergency?</strong>
-          <p style="margin:.4rem 0 0;font-size:.88rem">For chemical emergencies during transport, contact <strong>CHEMTREC</strong> at <a href="tel:18004249300"><strong>1-800-424-9300</strong></a> (24 hours).</p>
-        </div>
-
-        <div class="map-container">
-          <div class="map-placeholder">
-            <div class="icon">📍</div>
-            <p><strong>Chicago Metropolitan Area</strong><br>Illinois, United States</p>
-            <p style="margin-top:.5rem;font-size:.82rem">Contact us for exact address and driving directions</p>
+            <div class="ci-label">Phone</div>
+            <div class="ci-value"><a href="tel:6307731830" style="color:var(--navy)">(630) 773-1830</a></div>
           </div>
         </div>
       </div>
 
-      <!-- FORM COLUMN -->
+      <!-- Form -->
       <div class="fade-up">
         <div class="form-card">
-          <h3 style="color:var(--navy);margin-bottom:.25rem">Send Us a Message</h3>
-          <p style="font-size:.9rem;margin-bottom:1.75rem">Fill out the form below and a member of our team will be in touch within one business day.</p>
-
+          <h3>Questions? Email Us.</h3>
           <form id="contact-form" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label for="first-name">First Name *</label>
-                <input type="text" id="first-name" name="first_name" placeholder="Jane" required>
+                <label for="name">Name <span style="color:var(--gold)">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Your full name">
               </div>
               <div class="form-group">
-                <label for="last-name">Last Name *</label>
-                <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
+                <label for="email">Email <span style="color:var(--gold)">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
               </div>
             </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="jane@company.com" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(312) 555-0100">
-              </div>
-            </div>
-
             <div class="form-group">
-              <label for="company">Company Name *</label>
-              <input type="text" id="company" name="company" placeholder="Acme Chemical Corp." required>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help?">
             </div>
-
             <div class="form-group">
-              <label for="service">Service of Interest</label>
-              <select id="service" name="service">
-                <option value="">— Select a Service —</option>
-                <option value="warehouse">Chemical Warehousing</option>
-                <option value="hazmat">Hazmat Warehouse Storage</option>
-                <option value="shipping">Shipping &amp; Freight</option>
-                <option value="nacd">NACD Compliance / Partnership</option>
-                <option value="tour">Facility Tour</option>
-                <option value="other">Other / General Inquiry</option>
+              <label for="inquiry">Inquiry Type</label>
+              <select id="inquiry" name="inquiry">
+                <option value="">Select an option</option>
+                <option value="price-quotes">Price Quotes</option>
+                <option value="shipping-info">Shipping Info</option>
+                <option value="general-info">General Info</option>
               </select>
             </div>
-
             <div class="form-group">
-              <label for="product">Chemical Product(s) / Material Type</label>
-              <input type="text" id="product" name="product" placeholder="e.g., Flammable solvents, corrosive acids, resins…">
+              <label for="message">Message <span style="color:var(--gold)">*</span></label>
+              <textarea id="message" name="message" required placeholder="Tell us about your needs&hellip;"></textarea>
             </div>
-
-            <div class="form-group">
-              <label for="message">Message / Details *</label>
-              <textarea id="message" name="message" placeholder="Please describe your warehousing or shipping requirements, approximate volumes, timeline, and any specific compliance needs…" required></textarea>
-            </div>
-
-            <div class="form-group" style="display:flex;align-items:flex-start;gap:.75rem;margin-bottom:1.5rem">
-              <input type="checkbox" id="consent" name="consent" style="width:auto;margin-top:.25rem" required>
-              <label for="consent" style="font-size:.87rem;font-weight:400;color:#555;cursor:pointer">I agree to be contacted by Jensen-Souders &amp; Associates, Inc. regarding my inquiry. We will not share your information with third parties.</label>
-            </div>
-
-            <button type="submit" class="btn btn-orange" style="width:100%;font-size:1rem;padding:.9rem">Send Message →</button>
-
-            <div class="form-success" id="form-success">
-              ✅ <strong>Message received!</strong> Thank you for reaching out. A member of our team will be in touch within one business day.
+            <button type="submit" class="btn btn-gold" style="width:100%">Send Message</button>
+            <div id="form-success" class="form-success">
+              &#10003; Thank you! Your message has been sent. We'll be in touch shortly.
             </div>
           </form>
         </div>
@@ -185,50 +144,14 @@
   </div>
 </section>
 
-<!-- WHY CONTACT -->
-<section class="section-pad bg-light">
-  <div class="container">
-    <div class="section-header centered fade-up">
-      <span class="eyebrow">What to Expect</span>
-      <h2>Our Promise to New Inquiries</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="card-grid card-grid-3">
-      <div class="card fade-up">
-        <div class="card-body text-center">
-          <div class="card-icon">⚡</div>
-          <h3>Fast Response</h3>
-          <p>We respond to all inquiries within one business day — typically the same day. You'll reach a real person who understands chemical logistics, not a call center.</p>
-        </div>
-      </div>
-      <div class="card fade-up">
-        <div class="card-body text-center">
-          <div class="card-icon">🎯</div>
-          <h3>Custom Solutions</h3>
-          <p>Every client has different needs. We take time to understand your specific products, volumes, and requirements before proposing a warehousing or shipping solution.</p>
-        </div>
-      </div>
-      <div class="card fade-up">
-        <div class="card-body text-center">
-          <div class="card-icon">🏭</div>
-          <h3>Facility Tours Welcome</h3>
-          <p>We invite prospective clients to tour our facility. Seeing our operations firsthand — the safety systems, the organization, the team — is often what closes the deal.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <div class="footer-main"><div class="container"><div class="footer-grid">
-    <div class="footer-brand"><div class="footer-logo"><svg width="32" height="32" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="6" fill="#e8601c"/><path d="M8 34V18l14-8 14 8v16" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><rect x="16" y="24" width="12" height="10" rx="1" fill="#fff" opacity=".9"/></svg> Jensen-Souders <span>&amp; Associates</span></div><p>A leading NACD-member chemical warehouse and logistics company proudly serving the Chicago metropolitan area and Midwest for over 40 years.</p></div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="warehouse.html">General Warehouse</a></li><li><a href="hazmat-warehouse.html">Hazmat Warehouse</a></li><li><a href="shipping.html">Shipping &amp; Freight</a></li><li><a href="nacd-compliance.html">NACD Compliance</a></li></ul></div>
-    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span class="ico">📍</span><span>Chicago Metropolitan Area, Illinois</span></div><div class="footer-contact-item"><span class="ico">📞</span><span>(708) 562-1006</span></div><div class="footer-contact-item"><span class="ico">✉️</span><span>info@jensen-souders.net</span></div></div>
-  </div></div></div>
-  <div class="container footer-bottom"><span>&copy; <span id="yr"></span> Jensen-Souders &amp; Associates, Inc. All rights reserved.</span><span><a href="nacd-compliance.html">NACD Responsible Distribution® Member</a></span></div>
+  <div class="container">
+    <p class="footer-copy">&copy;<span id="yr"></span> Jensen-Souders &amp; Associates, Inc. &mdash; All Rights Reserved</p>
+  </div>
 </footer>
-<button id="back-to-top" aria-label="Back to top">↑</button>
+
+<button id="back-to-top" aria-label="Back to top">&#8679;</button>
 <script src="js/main.js"></script>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
